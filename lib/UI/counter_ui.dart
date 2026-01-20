@@ -3,7 +3,6 @@ import 'package:bloc_state/Bloc/Counter/counter_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 import '../Bloc/Counter/counter_event .dart';
 
 class CounterUi extends StatelessWidget {
@@ -38,14 +37,14 @@ class CounterUi extends StatelessWidget {
                     color: Color(0xFF0F4C3A),
                   ),
                 ),
-
                 const SizedBox(height: 20),
 
-                // 
+                // Counter Circle
                 Container(
                   width: size.width * 0.6,
                   height: size.width * 0.6,
-                  constraints: const BoxConstraints(maxWidth: 260, maxHeight: 260),
+                  constraints:
+                      const BoxConstraints(maxWidth: 260, maxHeight: 260),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     gradient: const LinearGradient(
@@ -75,7 +74,7 @@ class CounterUi extends StatelessWidget {
 
                 const SizedBox(height: 30),
 
-                
+                // Buttons Row
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -107,7 +106,6 @@ class CounterUi extends StatelessWidget {
 
                 const SizedBox(height: 40),
 
-                // 
                 const Text(
                   "ذِكْرُ ٱللَّٰهِ طُمَأْنِينَةُ ٱلْقُلُوبِ",
                   style: TextStyle(
@@ -123,7 +121,6 @@ class CounterUi extends StatelessWidget {
     );
   }
 }
-
 
 class _TasbeehButton extends StatelessWidget {
   final IconData icon;
@@ -149,13 +146,12 @@ class _TasbeehButton extends StatelessWidget {
           backgroundColor: color,
           shape: const CircleBorder(),
           elevation: 6,
-          alignment: Alignment.center,
+          padding: EdgeInsets.zero, // ✅ Centers the icon perfectly
         ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(15),
-            child: Icon(icon, color: Colors.white, size: 28),
-          ),
+        child: Icon(
+          icon,
+          color: Colors.white,
+          size: 28,
         ),
       ),
     );
