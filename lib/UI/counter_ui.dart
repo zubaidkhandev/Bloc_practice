@@ -146,7 +146,7 @@ class _TasbeehButton extends StatelessWidget {
           backgroundColor: color,
           shape: const CircleBorder(),
           elevation: 6,
-          padding: EdgeInsets.zero, // ✅ Centers the icon perfectly
+          padding: EdgeInsets.zero, //code by zubaid khan
         ),
         child: Icon(
           icon,
